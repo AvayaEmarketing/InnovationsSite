@@ -37,6 +37,7 @@ public partial class report : System.Web.UI.Page
         public string company { get; set; }
         public string country { get; set; }
         public string business { get; set; }
+        public string language { get; set; }
         public string registerDate { get; set; }
     }
 
@@ -46,6 +47,7 @@ public partial class report : System.Web.UI.Page
         public string overall { get; set; }
         public string comments { get; set; }
         public string email { get; set; }
+        public string language { get; set; }
         public string registerDate { get; set; }
         
     }
@@ -75,7 +77,7 @@ public partial class report : System.Web.UI.Page
         SqlDataReader datos;
         SqlConnection con = new SqlConnection();
         con.ConnectionString = ConfigurationManager.ConnectionStrings["calawebConnectionString"].ToString();
-        string strSQL = "SELECT id,firstname,lastname,email,company,country,business,convert(varchar(60),registerDate) as registerDate FROM InnovationsSubscribe";
+        string strSQL = "SELECT id,firstname,lastname,email,company,country,business,language,convert(varchar(60),registerDate) as registerDate FROM InnovationsSubscribe";
         SqlCommand cmd = new SqlCommand(strSQL, con);
         
         try
@@ -109,7 +111,7 @@ public partial class report : System.Web.UI.Page
         SqlDataReader datos;
         SqlConnection con = new SqlConnection();
         con.ConnectionString = ConfigurationManager.ConnectionStrings["calawebConnectionString"].ToString();
-        string strSQL = "SELECT id,overall,comments,email,convert(varchar(60),registerDate) as registerDate FROM InnovationsFeedback";
+        string strSQL = "SELECT id,overall,comments,email,language,convert(varchar(60),registerDate) as registerDate FROM InnovationsFeedback";
         SqlCommand cmd = new SqlCommand(strSQL, con);
 
         try
@@ -267,11 +269,11 @@ public partial class report : System.Web.UI.Page
         string contenido = getContenido(tipo);
         if (tipo == "subscribe")
         {
-            data = "<tr><th width=\"10%\">ID</th><th width=\"10%\">Firstname</th><th width=\"10%\">Lastname</th><th width=\"10%\">Email</th><th width=\"10%\">Company</th><th width=\"10%\">Country</th><th width=\"10%\">Bussines Size</th><th width=\"10%\">Register Date</th></tr>";
+            data = "<tr><th width=\"10%\">ID</th><th width=\"10%\">Firstname</th><th width=\"10%\">Lastname</th><th width=\"10%\">Email</th><th width=\"10%\">Company</th><th width=\"10%\">Country</th><th width=\"10%\">Bussines Size</th><th width=\"10%\">Language</th><th width=\"10%\">Register Date</th></tr>";
         }
         else 
         {
-            data = "<tr><th width=\"10%\">ID</th><th width=\"10%\">Satisfied</th><th width=\"10%\">Comments</th><th width=\"10%\">Email</th><th width=\"10%\">Register Date</th></tr>";
+            data = "<tr><th width=\"10%\">ID</th><th width=\"10%\">Satisfied</th><th width=\"10%\">Comments</th><th width=\"10%\">Email</th><th width=\"10%\">Language</th><th width=\"10%\">Register Date</th></tr>";
         }
         contenido = data + contenido;
         contenido = "<table border = '1' style=" + '"' + "font-family: Verdana,Arial,sans-serif; font-size: 12px;" + '"' + ">" + contenido + "</table></body></html>";
@@ -318,6 +320,7 @@ public partial class report : System.Web.UI.Page
                 tabla += "<td>" + root.company + "</td>";
                 tabla += "<td>" + root.country + "</td>";
                 tabla += "<td>" + root.business + "</td>";
+                tabla += "<td>" + root.language + "</td>";
                 tabla += "<td>" + root.registerDate + "</td>";
                 tabla += "</tr>";
             }
@@ -333,6 +336,7 @@ public partial class report : System.Web.UI.Page
                 tabla += "<td>" + root.overall + "</td>";
                 tabla += "<td>" + root.comments + "</td>";
                 tabla += "<td>" + root.email + "</td>";
+                tabla += "<td>" + root.language + "</td>";
                 tabla += "<td>" + root.registerDate + "</td>";
                 tabla += "</tr>";
             }

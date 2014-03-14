@@ -45,7 +45,7 @@ public partial class feedback : System.Web.UI.Page
    
 
     [WebMethod(EnableSession = true)]
-    public static string putData(string overall, string email, string comments)
+    public static string putData(string overall, string email, string comments, string language)
     {
         string result = "";
         DateTime datt = DateTime.Now;
@@ -69,7 +69,7 @@ public partial class feedback : System.Web.UI.Page
             con.Close();
         }
 
-        string stmt = "INSERT INTO InnovationsFeedback (overall, comments, email, registerDate, registerDate2)  VALUES (@overall,@comments, @email, @registerDate, @registerDate2)";
+        string stmt = "INSERT INTO InnovationsFeedback (overall, comments, email, registerDate, registerDate2,language)  VALUES (@overall,@comments, @email, @registerDate, @registerDate2,@language)";
 
         SqlCommand cmd2 = new SqlCommand(stmt, con);
 
@@ -78,12 +78,14 @@ public partial class feedback : System.Web.UI.Page
         cmd2.Parameters.Add("@email", SqlDbType.VarChar, 150);
         cmd2.Parameters.Add("@registerDate", SqlDbType.DateTime);
         cmd2.Parameters.Add("@registerDate2", SqlDbType.VarChar, 60);
+        cmd2.Parameters.Add("@language", SqlDbType.VarChar, 50);
 
         cmd2.Parameters["@overall"].Value = overall;
         cmd2.Parameters["@comments"].Value = comments;
         cmd2.Parameters["@email"].Value = email;
         cmd2.Parameters["@registerDate"].Value = datt;
         cmd2.Parameters["@registerDate2"].Value = datt;
+        cmd2.Parameters["@language"].Value = language;
 
 
         try

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/bootstrap-responsive.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link href="css/bootstrap-dialog.css" rel="stylesheet" type="text/css" />
 
 
     <script src="assets/js/modernizr.custom.15697.js"></script>
@@ -180,8 +181,9 @@
     <script src="assets/js/prefixfree.min.js"></script>
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script type="text/javascript" src="js/bootstrap-dialog.js"></script>
     <script src="assets/js/jquery.hcaptions.js"></script>
-
+    <script type="text/javascript" src="js/subscribe.js"></script>
     <script type="text/javascript">
 $(function () {
 $("[data-toggle='tooltip']").tooltip();

@@ -136,9 +136,10 @@
                                     <th class="sorting" width="10%">Firstname</th>
                                     <th class="sorting" width="10%">Lastname</th>
                                     <th class="sorting" width="15%">Email</th>
-                                    <th class="sorting" width="15%">Company</th>
-                                    <th class="sorting" width="15%">Country</th>
-                                    <th class="sorting" width="15%">Business Size</th>
+                                    <th class="sorting" width="10%">Company</th>
+                                    <th class="sorting" width="10%">Country</th>
+                                    <th class="sorting" width="10%">Business Size</th>
+                                    <th class="sorting" width="10%">Language</th>
                                     <th class="sorting" width="15%">Register Date</th>
                                     
 
@@ -154,6 +155,7 @@
                                             <a href="#" id="btnDescargaExcel"><img src="images/xls.png" alt="to Excel" /></a>
                                         </div>
                                     </td>
+                                    <td>&nbsp;</td>
                                     <td>&nbsp;</td>
                                     <td>&nbsp;</td>
                                     <td>&nbsp;</td>
@@ -191,8 +193,9 @@
                                 <tr>
                                     <th class="sorting" width="5%">ID</th>
                                     <th class="sorting" width="10%">Satisfied</th>
-                                    <th class="sorting" width="55%">Comments</th>
+                                    <th class="sorting" width="45%">Comments</th>
                                     <th class="sorting" width="15%">Email</th>
+                                    <th class="sorting" width="10%">Language</th>
                                     <th class="sorting" width="15%">Register Date</th>
                                 </tr>
                             </thead>
@@ -205,6 +208,7 @@
                                             <a href="#" id="btnDescargaExcel2"><img src="images/xls.png" alt="to Excel" /></a>
                                         </div>
                                     </td>
+                                    <td>&nbsp;</td>
                                     <td>&nbsp;</td>
                                     <td>&nbsp;</td>
                                     <td>&nbsp;</td>
