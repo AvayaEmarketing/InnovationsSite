@@ -37,7 +37,7 @@
                         <li><a href="spanish.html">Espa&#241;ol</a></li>
                         <li><a href="english.html">Ingl&eacute;s</a></li>
                         <li><a href="portuguese.html">Portugu&eacute;s</a></li>
-                        <li class="hidden-phone"><a href="#" class="feed" rel="tooltip"  data-toggle="tooltip" data-placement="bottom" title="Feedback"><img src="assets/img/feedback.png" alt=""></a></li>
+                        <li class="hidden-phone"><a href="feedback-spa.html" class="feed" rel="tooltip"  data-toggle="tooltip" data-placement="bottom" title="Feedback"><img src="assets/img/feedback.png" alt=""></a></li>
                     </ul>
                 </div>
             </div>

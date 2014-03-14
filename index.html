@@ -38,7 +38,7 @@
 		<div class="container">
 			<div class="span12">
 				<div class="span6"><a href="http://www.avaya.com/usa/" target="_blank"><img src="assets/img/avaya.png" alt=""></a></div>
-				<div class="span6">
+				<div class="span6 hidden-phone">
 					<ul>
 						<li><a href="spanish.html">Spanish</a></li>
 						<li><a href="english.html">English</a></li>
@@ -49,6 +49,20 @@
 			</div>
 		</div>
 	</header>
+
+	
+	<div class="menumobile visible-phone">
+		<ul id="nav">
+			<li><a href="spanish.html">Spanish</a></li>
+			<li><a href="english.html">English</a></li>
+			<li><a href="portuguese.html">Portuguese</a></li>
+		</ul>
+	</div>
+
+
+	
+
+
 
 	<div class="container contentparent">
 		<section class="row-fluid">
@@ -94,10 +108,10 @@
 									</div>
 									</div>
 								<div class="mosaic-backdrop">
-									<img class="hidden-tablet hidden-phone" src="assets/img/latestinv.png"/>
-									<img class="visible-tablet" src="assets/img/latestinvtablet.png"/>
-									<img class="hidden-phone" src="assets/img/latestinvtablet.png"/>
-									<img class="visible-phone" src="assets/img/latestinvphone.png"/>
+									<img class="hidden-tablet hidden-phone" src="assets/img/latestinv.jpg"/>
+									<img class="visible-tablet" src="assets/img/latestinvtablet.jpg"/>
+									<img class="hidden-phone" src="assets/img/latestinvtablet.jpg"/>
+									<img class="visible-phone" src="assets/img/latestinvphone.jpg"/>
 								</div>
 								</div>
 						</div>
@@ -150,6 +164,18 @@ $("[data-toggle='tooltip']").tooltip();
 		    });
 		    
 	</script>
+
+<script type="text/javascript">
+	$("#nav").addClass("js").before('<div id="menu">&#9776;</div>');
+	$("#menu").click(function(){
+		$("#nav").toggle();
+	});
+	$(window).resize(function(){
+		if(window.innerWidth > 768) {
+			$("#nav").removeAttr("style");
+		}
+	});
+</script>
 
 
 </body>

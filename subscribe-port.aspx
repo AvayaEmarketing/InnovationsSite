@@ -37,7 +37,7 @@
                         <li><a href="spanish.html">Espanhol</a></li>
                         <li><a href="english.html">Ingl&ecirc;s</a></li>
                         <li><a href="portuguese.html">Portugu&ecirc;s</a></li>
-                        <li class="hidden-phone"><a href="#" class="feed" rel="tooltip"  data-toggle="tooltip" data-placement="bottom" title="Feedback"><img src="assets/img/feedback.png" alt=""></a></li>
+                        <li class="hidden-phone"><a href="subscribe-port.html" class="feed" rel="tooltip"  data-toggle="tooltip" data-placement="bottom" title="Feedback"><img src="assets/img/feedback.png" alt=""></a></li>
                     </ul>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                 
             <div class="textsubs">
                 <p>
-                    <em>Suscr&iacute;base a la Revista de Avaya y descubra c&oacute;mo la pr&oacute;xima generaci&oacute;n de soluciones de negocio puede beneficiar a su organizaci&oacute;n.</em>
+                    <em>Assine a Avaya Magazine e descubra como a pr&oacute;xima gera&ccedil;&atilde;o de solu&ccedil;&otilde;es empresariais pode beneficiar a sua organiza&ccedil;&atilde;o.</em>
                 </p>
             </div>
 
@@ -122,7 +122,7 @@
                             </div>
 
                             <div class="control-group">
-                                <label class="control-label" for="company">Quantos funcionários tem a sua empresa?<span style="color: #cc0000;">*</span></label>
+                                <label class="control-label" for="company">Quantos funcion&aacute;rios tem a sua empresa?<span style="color: #cc0000;">*</span></label>
 
                                 <div class="controls">
                                     <select id="business">

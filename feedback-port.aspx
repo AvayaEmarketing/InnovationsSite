@@ -50,7 +50,7 @@
             <li><a href="spanish.html">Espanhol</a></li>
             <li><a href="english.html">Inglês</a></li>
             <li><a href="portuguese.html">Português</a></li>
-            <li class="feedmobile"><a href="feedback-port.aspx">Feedback</a></li>
+            <li class="feedmobile"><a href="#">Feedback</a></li>
         </ul>
     </div>
 
@@ -77,51 +77,51 @@
                 
             
 
-                        <h3>Your feedback is important to us.</h3>
+                        <h3>Seu feedback &eacute; muito importante para n&oacute;s.</h3>
 
                        
                         <div class="form-horizontal" id="formulario">
-                            <label class="control-label" for="company">Overall, how satisﬁed are you with the magazine?</label>
+                            <label class="control-label" for="company">No geral, qu&atilde;o satisfeito voc&ecirc; est&aacute; com a revista? </label>
                             <div class="control-group">
                                 <div class="controls">
-                                    <input type="radio" name="overall" value="Very Satisfied"/> <label >Very Satisfied</label>
+                                    <input type="radio" name="overall" value="Very Satisfied"/> <label >Muito satisfeito</label>
                                 </div>
                             </div>
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <input type="radio" name="overall" value="Satisfied"/> <label >Satisfied</label>
+                                    <input type="radio" name="overall" value="Satisfied"/> <label >Satisfeito</label>
                                 </div>
                             </div>
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <input type="radio" name="overall" value="Neutral"/> <label >Neutral</label>
+                                    <input type="radio" name="overall" value="Neutral"/> <label >Neutro</label>
                                 </div>
                             </div>
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <input type="radio" name="overall" value="Dissatisﬁed"/> <label >Dissatisﬁed</label>
+                                    <input type="radio" name="overall" value="Dissatisﬁed"/> <label >Insatisfeito </label>
                                 </div>
                             </div>
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <input type="radio" name="overall" value="Very Dissatisﬁed"/> <label >Very Dissatisﬁed</label>
+                                    <input type="radio" name="overall" value="Very Dissatisﬁed"/> <label >Muito insatisfeito </label>
                                 </div>
                             </div>
 
                             
                             <div class="control-group">
-                                <label class="control-label" for="comments">We welcome any additional suggestions or thoughts you’d like to share</label>
+                                <label class="control-label" for="comments">Agradecemos qualquer sugestão ou opinião adicional que você deseje compartilhar conosco</label>
                                 <div class="controls">
                                     <textarea class="textarea" id="comments" rows="5"></textarea>
                                 </div>
                             </div>
 
                             <div class="control-group">
-                                <label class="control-label" for="email">If you would like a response please provide your email address</label>
+                                <label class="control-label" for="email">caso você deseje obter uma resposta, por favor, forneça seu endereço de e-mail</label>
                                 <div class="controls">
                                     <input class="textarea" type="text" id="email" />
                                 </div>
