@@ -103,7 +103,7 @@ function registrarInfo(formulario) {
                 var label = ""
                 if (idioma == "ESP") {
                     titulo = "Atención";
-                    mensaje = "Se ha suscrito correctamente a Innovations Avaya";
+                    mensaje = "Gracias por suscribirse a Avaya Innovations Magazine";
                     Etq = "Aceptar";
                 }
                 else if (idioma == "ENG") {
@@ -112,8 +112,8 @@ function registrarInfo(formulario) {
                     Etq = "Accept";
                 }
                 else if (idioma == "POR") {
-                    titulo = "Attention";
-                    mensaje = "Thanks for to Avaya Innovations Magazine";
+                    titulo = "Atenção";
+                    mensaje = "Parabéns, você já é um assinante da Avaya Innovations Magazine!";
                     Etq = "Accept";
                 }
                 BootstrapDialog.show({

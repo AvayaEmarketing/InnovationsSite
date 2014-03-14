@@ -78,20 +78,20 @@
                 
             
 
-                        <h3>Your feedback is important to us.</h3>
+                        <h3>Sus sugerencias son muy importantes para nosotros. </h3>
 
                        
                         <div class="form-horizontal" id="formulario">
-                            <label class="control-label" for="company">Overall, how satisﬁed are you with the magazine?</label>
+                            <label class="control-label" for="company">En general, qué tan satisfecho está con nuestra revista: </label>
                             <div class="control-group">
                                 <div class="controls">
-                                    <input type="radio" name="overall" value="Very Satisfied"/> <label >Very Satisfied</label>
+                                    <input type="radio" name="overall" value="Very Satisfied"/> <label >Muy satisfecho</label>
                                 </div>
                             </div>
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <input type="radio" name="overall" value="Satisfied"/> <label >Satisfied</label>
+                                    <input type="radio" name="overall" value="Satisfied"/> <label >Satisfecho</label>
                                 </div>
                             </div>
 
@@ -103,26 +103,26 @@
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <input type="radio" name="overall" value="Dissatisﬁed"/> <label >Dissatisﬁed</label>
+                                    <input type="radio" name="overall" value="Dissatisﬁed"/> <label >Insatisfecho</label>
                                 </div>
                             </div>
 
                             <div class="control-group">
                                 <div class="controls">
-                                    <input type="radio" name="overall" value="Very Dissatisﬁed"/> <label >Very Dissatisﬁed</label>
+                                    <input type="radio" name="overall" value="Very Dissatisﬁed"/> <label >Muy insatisfecho</label>
                                 </div>
                             </div>
 
                             
                             <div class="control-group">
-                                <label class="control-label" for="comments">We welcome any additional suggestions or thoughts you’d like to share</label>
+                                <label class="control-label" for="comments">Cualquier otra sugerencia o idea que quiera compartir con nosotros es bienvenida: </label>
                                 <div class="controls">
                                     <textarea class="textarea" id="comments" rows="5"></textarea>
                                 </div>
                             </div>
 
                             <div class="control-group">
-                                <label class="control-label" for="email">If you would like a response please provide your email address</label>
+                                <label class="control-label" for="email">Si quiere recibir respuesta a sus preguntas, comparta con nosotros su correo electrónico. </label>
                                 <div class="controls">
                                     <input class="textarea" type="text" id="email" />
                                 </div>

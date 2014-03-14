@@ -126,7 +126,7 @@
 
                 <div class="row-fluid">
                     <div class="span12">
-                        <h2>My Translations</h2>
+                        <h2>Innovations Magazine</h2>
 
 
                         <table id="datatables" cellpadding="0" cellspacing="0" border="0" style="width: 100%; text-align: center; visibility: hidden" class="table table-striped table-bordered">
@@ -185,7 +185,7 @@
 
                 <div class="row-fluid">
                     <div class="span12">
-                        <h2>My Translations</h2>
+                        <h2>Innovations Magazine</h2>
 
 
                         <table id="datatables2" cellpadding="0" cellspacing="0" border="0" style="width: 100%; text-align: center; visibility: hidden" class="table table-striped table-bordered">

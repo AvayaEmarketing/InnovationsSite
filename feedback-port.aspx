@@ -114,14 +114,14 @@
 
                             
                             <div class="control-group">
-                                <label class="control-label" for="comments">Agradecemos qualquer sugestão ou opinião adicional que você deseje compartilhar conosco</label>
+                                <label class="control-label" for="comments">Agradecemos qualquer sugest&atilde;o ou opini&atilde;o adicional que voc&ecirc; deseje compartilhar conosco</label>
                                 <div class="controls">
                                     <textarea class="textarea" id="comments" rows="5"></textarea>
                                 </div>
                             </div>
 
                             <div class="control-group">
-                                <label class="control-label" for="email">caso você deseje obter uma resposta, por favor, forneça seu endereço de e-mail</label>
+                                <label class="control-label" for="email">caso voc&ecirc; deseje obter uma resposta, por favor, forne&ccedil;a seu endere&ccedil;o de e-mail</label>
                                 <div class="controls">
                                     <input class="textarea" type="text" id="email" />
                                 </div>

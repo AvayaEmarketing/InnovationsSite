@@ -91,17 +91,17 @@ function registrarInfo(formulario) {
                 var label = ""
                 if (idioma == "ESP") {
                     titulo = "Atención";
-                    mensaje = "Gracias por el tiempo dedicado a llenar este formulario";
+                    mensaje = "Gracias por su feedback";
                     Etq = "Aceptar";
                 }
                 else if (idioma == "ENG") {
                     titulo = "Attention";
-                    mensaje = "Thanks for your appreciate time";
+                    mensaje = "Thanks for your feedback";
                     Etq = "Accept";
                 }
                 else if (idioma == "POR") {
-                    titulo = "Attention";
-                    mensaje = "Thanks";
+                    titulo = "Atenção";
+                    mensaje = "Obrigado pelo seu feedback";
                     Etq = "Accept";
                 }
                 BootstrapDialog.show({
