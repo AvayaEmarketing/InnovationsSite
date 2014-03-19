@@ -10,7 +10,27 @@ function message(texto, titulo, tipo) {
         //type: 'BootstrapDialog.TYPE_' + tipo,
         title: titulo,
         message: texto,
-        cssClass: 'type-' + tipo
+        cssClass: 'type-' + tipo,
+		buttons: [{
+                        label: 'Accept',
+                        cssClass: 'btn-danger',
+                        action: function (dialogItself) {
+						var idioma = QueryString.lang;
+                            if (idioma == "ESP") {
+                                //document.location.href = "spanish.html?lang=ESP";
+								dialogItself.close();
+								$("#myModal").modal("toggle");
+                            } else if (idioma == "ENG") {
+                                //document.location.href = "english.html?lang=ENG";
+								dialogItself.close();
+								$("#myModal").modal("toggle");
+                            } else if (idioma == "POR") {
+                                //document.location.href = "portuguese.html?lang=POR";
+								dialogItself.close();
+								$("#myModal").modal("toggle");
+                            }
+                        }
+                    }]
     });
     return false;
 }
@@ -51,8 +71,19 @@ function validaMail(mail) {
 
 $(document).ready(function () {
    
+   $('#Register').click(function () {
+   var formulario = getForm();
+		if ((formulario.overall === "") || (formulario.overall === undefined)) {
+      $('#overall').next('.help-inline').show();
+      return false;
+    }
+    else {
+      registrarInfo(formulario);
+      return true;
+    }
+   });
 
-    $('#Register').click(function () {
+   /* $('#Register').click(function () {
         var formulario = getForm();
         if ((formulario.overall === "") || (formulario.overall === undefined)) {
             message("Please select one item", "Register", "danger");
@@ -68,7 +99,7 @@ $(document).ready(function () {
             }
         }
         return false;
-    });
+    });*/
 
 });
 
@@ -93,36 +124,45 @@ function registrarInfo(formulario) {
                     titulo = "Atención";
                     mensaje = "Gracias por su feedback";
                     Etq = "Aceptar";
+					$('#myModalMessageES').modal('show');
                 }
                 else if (idioma == "ENG") {
                     titulo = "Attention";
                     mensaje = "Thanks for your feedback";
                     Etq = "Accept";
+					$('#myModalMessageEN').modal('show');
                 }
                 else if (idioma == "POR") {
                     titulo = "Atenção";
                     mensaje = "Obrigado pelo seu feedback";
                     Etq = "Accept";
+					$('#myModalMessagePO').modal('show');
                 }
-                BootstrapDialog.show({
+                /* BootstrapDialog.show({
                     cssClass: 'type-danger',
                     title: titulo,
                     message: mensaje,
                     buttons: [{
                         label: Etq,
                         cssClass: 'btn-danger',
-                        action: function () {
+                        action: function (dialogItself) {
                             if (idioma == "ESP") {
-                                document.location.href = "spanish.html";
+                                //document.location.href = "spanish.html?lang=ESP";
+								dialogItself.close();
+								//$("#myModal").modal("toggle");
                             } else if (idioma == "ENG") {
-                                document.location.href = "english.html";
+                                //document.location.href = "english.html?lang=ENG";
+								dialogItself.close();
+								//$("#myModal").modal("toggle");
                             } else if (idioma == "POR") {
-                                document.location.href = "portuguese.html";
+                                //document.location.href = "portuguese.html?lang=POR";
+								dialogItself.close();
+								//$("#myModal").modal("toggle");
                             }
                         }
                     }]
 
-                });
+                }); */
             } else {
                 message("Alert, please try again", "Register", "danger");
             }

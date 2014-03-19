@@ -1,0 +1,146 @@
+
+			<script src="js/feedback.js"></script>
+		
+		
+		<style>
+			#feedback { 
+				height: 104px; 
+				width: 104px; 
+				position: fixed; 
+				top: 40%; 
+				z-index: 1000;
+				transform: rotate(-90deg);
+				-webkit-transform: rotate(-90deg); 
+				-moz-transform: rotate(-90deg); 
+				-o-transform: rotate(-90deg); 
+				filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+				left:96%;
+			}
+
+			#feedback a { 
+				display: block; 
+				background: #f00; 
+				height: 15px; 
+				width: 70px; 
+				padding: 8px 16px;
+				color: #fff; 
+				font-family: Arial, sans-serif; 
+				font-size: 17px; 
+				font-weight: bold; 
+				text-decoration: none; 
+				border-bottom: solid 1px #333; border-left: solid 1px #333; border-right: solid 1px #fff;
+				left:96%;
+			}
+
+			#feedback a:hover { 
+				background: #06c; 
+			}
+		</style>
+		
+		<style type="text/css">
+.bs-example{
+	margin: 20px;
+}
+.open-modal{
+	position: absolute;
+	margin: 0 auto;
+	top: 20px;
+	right: 0;
+	left: 0;
+}
+</style>
+		
+ <script type="text/javascript">
+$(document).ready(function(){
+	$('.open-modal').click(function(){
+		$('#myModal').modal('show');
+	});
+    
+});
+</script> 
+
+
+
+
+		<div id="feedback">
+			<!-- <a class="open-modal">feedback</a> -->
+			<input type="button" class="btn btn-lg btn-primary open-modal" value="Feedback" >
+		</div>
+		
+		<!-- Modal HTML -->
+   <div id="myModal" class="modal fade" tabindex="-1" data-width="400" style="display: none;" >
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">Sus sugerencias son muy importantes para nosotros.</h4>
+  </div>
+  <div class="modal-body">
+		<div id="formulario">
+		<input type="hidden" name="overall" id="overall" style="width:300px"><span class="hide help-inline">This field is required</span>
+        <h5>En general, qué tan satisfecho está con nuestra revista:</h5><br/>
+        <input name="satisfied"  value="Very Satisfied" type="radio" /> Muy satisfecho<br/>
+        <input name="satisfied"  value="Satisfied" type="radio" /> Satisfecho<br/>
+        <input name="satisfied"  value="Neutral" type="radio" /> Neutral<br/>
+        <input name="satisfied"  value="Dissatisfied" type="radio" /> Insatisfecho<br/>
+        <input name="satisfied"  value="Very Dissatisfied" type="radio" /> Muy insatisfecho<br/>
+		</div>
+		<br/>
+	  
+		<div id="q2">
+        <h5> Cualquier otra sugerencia o idea que quiera compartir con nosotros es bienvenida:
+ </h5>
+        <p><textarea class="form-control" rows="3" id="comments"></textarea></p>
+		</div>
+        
+		<div id="q3">
+		<br/>
+		<h5> Si quiere recibir respuesta a sus preguntas, comparta con nosotros su correo electrónico.
+</h5>
+		<p><input class="form-control" type="text" id="email" /></p>
+		</div>
+    
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" id="Register" data-dismiss="modal">Enviar</button>
+    <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button> 
+
+  </div>
+</div>
+
+	<!-- Modal HTML Message-->
+   <div id="myModalMessageES" class="modal fade" tabindex="-1" data-width="400" style="display: none;" >
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">Atención.</h4>
+  </div>
+  <div class="modal-body">
+        <h5>Gracias por su feedback. </h5> 
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal" id="Accept">Aceptar</button>
+    
+
+  </div>
+</div>
+
+		<script>
+			// Get the wrapper div, and the contained &lt;a&gt; element
+			var feedback_btn = document.getElementById("feedback");
+			var feedback_link = feedback_btn.getElementsByTagName("a")[0];
+
+			// Check for browsers that don't support CSS3 transforms or IE's filters
+			if(feedback_btn.style.Transform == undefined && feedback_btn.style.WebkitTransform == undefined && feedback_btn.style.MozTransform == undefined && feedback_btn.style.OTransform == undefined && feedback_btn.filters == undefined) {
+
+				// Swap width with height, change padding
+				feedback_link.style.width="15px";
+				feedback_link.style.height="70px";
+				feedback_link.style.padding="16px 8px";
+				
+				// Insert vertical SVG text
+				feedback_link.innerHTML = "<object type='image/svg+xml' data='feedback_vertical.svg'></object>";
+			}
+
+			// OnClick event here
+			//feedback_link.onclick = function(e) { e.preventDefault(); $("#myModal").modal(); }
+		</script>
+		<!-- <script src="feedback/js/bootstrap-modal.js"></script>
+		<script src="feedback/js/bootstrap-modalmanager.js"></script> -->
