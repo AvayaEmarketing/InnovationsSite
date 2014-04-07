@@ -1,19 +1,21 @@
 <script src="js/feedback.js"></script>
 		
 		
-		<style>
+				<style>
 			#feedback { 
 				height: 104px; 
-				width: 104px; 
+				width: auto; 
 				position: fixed; 
-				top: 40%; 
+				top: 50%; 
 				z-index: 1000;
 				transform: rotate(-90deg);
 				-webkit-transform: rotate(-90deg); 
 				-moz-transform: rotate(-90deg); 
 				-o-transform: rotate(-90deg); 
 				filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-				left:96%;
+				right:0;
+				background: #c00;
+				font-family: 'proximanova-regular';
 			}
 
 			#feedback a { 
@@ -23,9 +25,6 @@
 				width: 70px; 
 				padding: 8px 16px;
 				color: #fff; 
-				font-family: Arial, sans-serif; 
-				font-size: 17px; 
-				font-weight: bold; 
 				text-decoration: none; 
 				border-bottom: solid 1px #333; border-left: solid 1px #333; border-right: solid 1px #fff;
 				left:96%;
@@ -47,6 +46,21 @@
 	right: 0;
 	left: 0;
 }
+
+.btnme{
+	background: #c00;
+	color: #fff;
+	font-family: 'proximanova-regular';
+}
+
+.btnme:hover{
+	background: #E30A21;
+	color: #fff;
+	font-family: 'proximanova-regular';
+}
+
+
+
 </style>
 		
 <script type="text/javascript">
@@ -62,24 +76,24 @@ $(document).ready(function(){
 
 		<div id="feedback">
 			<!-- <a class="open-modal">feedback</a> -->
-			<input type="button" class="btn btn-lg btn-primary open-modal" value="Feedback" >
+			<input type="button" class="btnme btn open-modal" value="Feedback" >
 		</div>
 		
 		<!-- Modal HTML -->
-   <div id="myModal" class="modal fade" tabindex="-1" data-width="400" style="display: none;" >
+   <div id="myModal" class="light modal fade" tabindex="-1" data-width="400" style="display: none;" >
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h4 class="modal-title">Seu feedback é muito importante para nós.</h4>
+    <h4 class="modal-title light">Seu feedback é muito importante para nós.</h4>
   </div>
   <div class="modal-body">
 		<div id="formulario">
 		<input type="hidden" name="overall" id="overall" style="width:300px"><span class="hide help-inline">This field is required</span>
         <h5>No geral, quão satisfeito você está com a revista? </h5>
-        <input name="satisfied"  value="Very Satisfied" type="radio" /> Muito satisfeito<br/>
-        <input name="satisfied"  value="Satisfied" type="radio" /> Satisfeito<br/>
-        <input name="satisfied"  value="Neutral" type="radio" /> Neutro<br/>
-        <input name="satisfied"  value="Dissatisfied" type="radio" /> Insatisfeito <br/>
-        <input name="satisfied"  value="Very Dissatisfied" type="radio" /> Muito insatisfeito <br/>
+        <input name="satisfied"  value="Very Satisfied" type="radio" /><label>&nbsp;&nbsp;Muito satisfeito</label>
+        <input name="satisfied"  value="Satisfied" type="radio" /><label>&nbsp;&nbsp;Satisfeito</label>
+        <input name="satisfied"  value="Neutral" type="radio" /><label>&nbsp;&nbsp;Neutro</label>
+        <input name="satisfied"  value="Dissatisfied" type="radio" /><label>&nbsp;&nbsp;Insatisfeito </label>
+        <input name="satisfied"  value="Very Dissatisfied" type="radio" /><label>&nbsp;&nbsp;Muito insatisfeito </label>
 		</div>
 		<br/>
 	  
@@ -90,7 +104,7 @@ $(document).ready(function(){
 		</div>
         
 		<div id="q3">
-		<br/>
+		
 		<h5> caso você deseje obter uma resposta, por favor, forneça seu endereço de e-mail
 </h5>
 		<p><input class="form-control" type="text" id="email" /></p>
@@ -98,9 +112,7 @@ $(document).ready(function(){
     
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-primary" id="Register" data-dismiss="modal">Enviar</button>
-    <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
-
+    <button type="button" class="btnme btn" id="Register" data-dismiss="modal">Enviar</button>
   </div>
 </div>
 
