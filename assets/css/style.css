@@ -48,6 +48,8 @@ body , html, .zero{
 	font-family: 'proximanova-regular';
 }
 
+a img{border: 0;}
+
 .navbarred{
 	width: 100%;
 	min-height: 120px;
@@ -124,9 +126,10 @@ body , html, .zero{
 
 .logoinv span:first-child{
 	color: #666;
-	font-size: 8.5em;
+	font-size: 7.5em;
 	font-family: 'proximanova-lihgt';
 	letter-spacing: -5px;
+	text-align: center;
 
 	
 }
@@ -135,9 +138,10 @@ body , html, .zero{
 	color: #888;
 	background-color: #E30A21;
 	color: #fff;
-	font-size: 8.5em;
+	font-size: 7.5em;
 	font-family: 'proxima_nova_rgbold';
 	margin-top: -30px;
+	text-align: center;
 	
 }
 
@@ -163,13 +167,39 @@ body , html, .zero{
 	width: 32%;
 	min-height: 55px;
 	line-height: 60px;
+	-moz-transition: all 500ms ease-in;
+    -ms-transition: all 500ms ease-in;
+    -o-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+
+}
+
+.lang ul li:hover{
+	background-color: #eee;
+	-moz-transition: all 500ms ease-out;
+    -ms-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
 
 }
 
 .lang ul li a {
 	color: #fff;
 	text-decoration: none;
-	padding: 10px;
+	padding: 15px 30px;
+	-moz-transition: all 300ms ease-in;
+    -ms-transition: all 300ms ease-in;
+    -o-transition: all 300ms ease-in;
+    transition: all 300ms ease-in;
+
+}
+
+.lang ul li a:hover {
+	color: #333;
+    -moz-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
 
 }
 
@@ -187,6 +217,7 @@ body , html, .zero{
 	background: #47505e;
 	border-radius: 15px 15px 0 0;
 	-webkit-border-radius: 15px 15px 0 0;
+	-moz-border-radius: 15px 15px 0 0;
 	padding-top: 20px;
 }
 
@@ -196,6 +227,7 @@ body , html, .zero{
 	min-height: 60px;
 	border-radius: 0 0 15px 15px;
 	-webkit-border-radius: 0 0 15px 15px;
+	-moz-border-radius: 0 0 15px 15px;
 	background: #e9ecf0;
 }
 
@@ -440,7 +472,8 @@ input[type="radio"] {
 input[type="radio"]:after {
     background-color: #fff;
     border-radius: 50%;
-    -webkit-border-radius:50%;
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
     border: 1px solid #c00;
     content: '';
     border-width: thin;
@@ -522,9 +555,9 @@ input[type="radio"]:checked:after {
 .imacsup{
 	width: 100%;
 	min-height: 480px;
-
 	border-radius: 15px;
-	-webkit-border-radius:15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
 
 }
 
@@ -620,7 +653,8 @@ input[type="radio"]:checked:after {
 
 .imacsup{
 	border-radius: 15px;
-	-webkit-border-radius:15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
 	margin-bottom: 50px;
 
 }
@@ -714,8 +748,9 @@ input[type="radio"]:checked:after {
 
 	min-height: 700px;
 	border-radius: 25px;
-	-webkit-border-radius:25%
-	margin-bottom: 50px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	margin-bottom: 25px;
 
 }
 
