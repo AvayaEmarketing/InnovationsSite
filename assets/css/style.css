@@ -175,7 +175,8 @@ a img{border: 0;}
 }
 
 .lang ul li:hover{
-	background-color: #eee;
+	color: #E30A21; 
+	background-color: #fff;
 	-moz-transition: all 500ms ease-out;
     -ms-transition: all 500ms ease-out;
     -o-transition: all 500ms ease-out;
@@ -186,7 +187,7 @@ a img{border: 0;}
 .lang ul li a {
 	color: #fff;
 	text-decoration: none;
-	padding: 15px 30px;
+	padding: 15px 18px;
 	-moz-transition: all 300ms ease-in;
     -ms-transition: all 300ms ease-in;
     -o-transition: all 300ms ease-in;
@@ -195,7 +196,7 @@ a img{border: 0;}
 }
 
 .lang ul li a:hover {
-	color: #333;
+	color: #E30A21;
     -moz-transition: all 300ms ease-out;
     -ms-transition: all 300ms ease-out;
     -o-transition: all 300ms ease-out;
@@ -528,7 +529,9 @@ input[type="radio"]:checked:after {
 }
 
 
-
+#feedbackButton{
+	w
+}
 
 
 
@@ -946,6 +949,8 @@ input[type="radio"]:checked:after {
   padding: 0 20px;
 
 }
+
+
 
 }
 
