@@ -4,8 +4,8 @@
 		
 		<style>
 			#feedback { 
-				height: 104px; 
-				width: auto; 
+				height: 15px; 
+				width: 70px; 
 				position: fixed; 
 				top: 50%; 
 				z-index: 1000;
@@ -14,7 +14,9 @@
 				-moz-transform: rotate(-90deg); 
 				-o-transform: rotate(-90deg); 
 				filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-				right: 0;
+				right:0;
+				
+				
 			}
 
 			#feedback a { 
@@ -29,7 +31,8 @@
 				font-weight: bold; 
 				text-decoration: none; 
 				border-bottom: solid 1px #333; border-left: solid 1px #333; border-right: solid 1px #fff;
-				right: 0;
+				right:0;
+				
 			}
 
 			#feedback a:hover { 
@@ -69,7 +72,7 @@
 		
  <script type="text/javascript">
 $(document).ready(function(){
-	$('.open-modal').click(function(){
+	$('.open').click(function(){
 		$('#myModal').modal('show');
 	});
     
@@ -79,10 +82,10 @@ $(document).ready(function(){
 
 
 
-		<div id="feedback">
-			<!-- <a class="open-modal">feedback</a> --> 
-			<input type="button" class="btnme btn open-modal" value="Feedback" >
-		</div>
+		<!-- <div id="feedback"> -->
+			 <a class="btnme btn open" id="feedback">feedback</a> 
+			<!-- <input type="button" class="btnme btn open-modal" value="Feedback" > -->
+		<!-- </div> -->
 		
 		<!-- Modal HTML -->
    <div id="myModal" class="light modal fade" tabindex="-1" data-width="400" style="display: none;" >
@@ -146,9 +149,9 @@ $(document).ready(function(){
 			if(feedback_btn.style.Transform == undefined && feedback_btn.style.WebkitTransform == undefined && feedback_btn.style.MozTransform == undefined && feedback_btn.style.OTransform == undefined && feedback_btn.filters == undefined) {
 
 				// Swap width with height, change padding
-				//feedback_link.style.width="15px";
-				//feedback_link.style.height="70px";
-				//feedback_link.style.padding="16px 8px";
+				feedback_link.style.width="15px";
+				feedback_link.style.height="70px";
+				feedback_link.style.padding="16px 8px";
 				
 				// Insert vertical SVG text
 				feedback_link.innerHTML = "<object type='image/svg+xml' data='feedback_vertical.svg'></object>";
