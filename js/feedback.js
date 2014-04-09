@@ -121,19 +121,19 @@ function registrarInfo(formulario) {
                 var mensaje = "";
                 var label = ""
                 if (idioma == "ESP") {
-                    titulo = "Atención";
+                    titulo = "Avaya Innovations Magazine";
                     mensaje = "Gracias por su feedback";
                     Etq = "Aceptar";
 					$('#myModalMessageES').modal('show');
                 }
                 else if (idioma == "ENG") {
-                    titulo = "Attention";
+                    titulo = "Avaya Innovations Magazine";
                     mensaje = "Thanks for your feedback";
                     Etq = "Accept";
 					$('#myModalMessageEN').modal('show');
                 }
                 else if (idioma == "POR") {
-                    titulo = "Atenção";
+                    titulo = "Avaya Innovations Magazine";
                     mensaje = "Obrigado pelo seu feedback";
                     Etq = "Accept";
 					$('#myModalMessagePO').modal('show');
