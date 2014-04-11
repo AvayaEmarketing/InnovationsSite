@@ -412,7 +412,6 @@ a img{border: 0;}
 }
 
 .buttons ul li:last-child{
-	background: #666;
 	border-radius: 6px;
 	height: 23px;
 	padding: 6px;
@@ -431,9 +430,9 @@ a img{border: 0;}
 
 .buttons ul li:last-child i{
 	position: absolute;
-	color: #fff;
-	font-size: 26px;
-	left: 258px;
+	color: #E30A21;
+	font-size: 29px;
+	left: 112px;
 	-moz-transition: all 500ms ease-in;
     -ms-transition: all 500ms ease-in;
     -o-transition: all 500ms ease-in;
@@ -443,13 +442,11 @@ a img{border: 0;}
 
 .buttons ul li:last-child i:hover{
 
-	color: #E30A21;
-	font-size: 24px;
+	color: #666;
 	-moz-transition: all 500ms ease-out;
     -ms-transition: all 500ms ease-out;
     -o-transition: all 500ms ease-out;
     transition: all 500ms ease-out;
-    -moz-transform: rotate(360deg);
 
 }
 
@@ -578,12 +575,20 @@ input[type="radio"]:checked:after {
 }
 
 .friend{
-	color: #fff;
+	color: #666;
 	font-size: 13px;
 	display: inline-block;
-	padding: 0;
+	padding-left: 20px;
+	-moz-transition: all 500ms ease-in;
+    -ms-transition: all 500ms ease-in;
+    -o-transition: all 500ms ease-in;
 }
-
+.friend:hover{
+	color: #E30A21;
+	-moz-transition: all 500ms ease-out;
+    -ms-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+}
 
 
 
