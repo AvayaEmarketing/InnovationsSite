@@ -379,7 +379,7 @@ a img{border: 0;}
 	float: left;
 	display: inline-block;
 	position: relative;
-	margin-right: 25px;
+	margin-right: 15px;
 }
 
 .share a{
@@ -404,22 +404,61 @@ a img{border: 0;}
 	display: inline-block;
 	padding: 0;
 	margin: 0;
-
-
+	width: 100%;
 }
 
 .buttons ul li{
 	float: left;
+}
+
+.buttons ul li:last-child{
+	background: #666;
+	border-radius: 6px;
+	height: 23px;
+	padding: 6px;
+	width: 160px;
+	margin-top: -5px;
+	float: right;
+	line-height: 18px;
+
+}
+
+.buttons ul li:last-child a{
+	color: #fff;
+	padding: 0;
+	margin: 0;
+}
+
+.buttons ul li:last-child i{
+	position: absolute;
+	color: #fff;
+	font-size: 26px;
+	left: 258px;
+	-moz-transition: all 500ms ease-in;
+    -ms-transition: all 500ms ease-in;
+    -o-transition: all 500ms ease-in;
+
+
+}
+
+.buttons ul li:last-child i:hover{
+
+	color: #E30A21;
+	font-size: 24px;
+	-moz-transition: all 500ms ease-out;
+    -ms-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+    -moz-transform: rotate(360deg);
 
 }
 
 .buttons ul li a{
 	color: #E30A21;
 	font-size: 2em;
-	margin-right: 30px;
-
-
+	margin-right: 15px;
 }
+
 
 .sepissue{
 	border: 1px dashed #c00;
@@ -530,10 +569,20 @@ input[type="radio"]:checked:after {
 
 
 #feedbackButton{
-	w
+
 }
 
+.copy{
+	text-align: right;
+	font-size: 12px;
+}
 
+.friend{
+	color: #fff;
+	font-size: 13px;
+	display: inline-block;
+	padding: 0;
+}
 
 
 
@@ -545,7 +594,6 @@ input[type="radio"]:checked:after {
 	font-size: 5.8em;
 
 
-	
 }
 
 .logoinv span:last-child{
