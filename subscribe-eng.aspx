@@ -33,10 +33,9 @@
                 <div class="span6"><a href="index.html" target="blank"><img src="assets/img/avaya.png" alt=""></a></div>
                 <div class="span6 hidden-phone">
                     <ul>
-                        <li><a href="spanish.html">Spanish</a></li>
-                        <li><a href="english.html">English</a></li>
-                        <li><a href="portuguese.html">Portuguese</a></li>
-                        <li class="hidden-phone"><a href="feedback-eng.aspx" class="feed" rel="tooltip"  data-toggle="tooltip" data-placement="bottom" title="Feedback"><img src="assets/img/feedback.png" alt=""></a></li>
+                        <li><a href="spanish.html?lang=ESP">Spanish</a></li>
+                        <li><a href="english.html?lang=ENG">English</a></li>
+                        <li><a href="portuguese.html?lang=POR">Portuguese</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,7 +48,6 @@
             <li><a href="spanish.html">Spanish</a></li>
             <li><a href="english.html">English</a></li>
             <li><a href="portuguese.html">Portuguese</a></li>
-            <li class="feedmobile"><a href="feedback-eng.aspx">Feedback</a></li>
         </ul>
     </div>
 
