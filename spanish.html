@@ -300,6 +300,30 @@ Compartir en Facebook</a>
 <!-- feedBack Button-->
 	<div id="feedbackButton">
 	</div>
+	
+	<!-- Modal ShareContent-->
+    <div id="shareContent" class="modal fade" tabindex="-1" data-width="600" style="display: none;">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Compartir con un amigo.</h4>
+        </div>
+        <div class="modal-body">
+            <div><h5> De:</h5> 
+                <p><input class="form-control" type="text" id="mail_from" /></p>                
+            </div>
+            
+            <div><h5> Para "Digite los correos separados por comas (,)":</h5> 
+                <p><input class="form-control" type="text" id="mails" /></p>                
+            </div>
+             <div><h5> Mensaje:</h5> 
+                <p>
+                    <textarea class="form-control" rows="4" id="mensaje" ></textarea></p>                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="Accept">Aceptar</button>
+        </div>
+    </div>
 
 
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -314,6 +338,7 @@ Compartir en Facebook</a>
 	<script type="text/javascript" src="assets/js/html5shiv.js"></script>
     <script type="text/javascript" src="assets/js/json2.js"></script>
     <script type="text/javascript" src="assets/js/modernizr-2.6.2.js"></script>
+	<script type="text/javascript" src="js/shareContent.js"></script>
 
 	<script type="text/javascript">
 $(function () {
