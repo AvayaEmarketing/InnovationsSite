@@ -417,8 +417,8 @@ a img{border: 0;}
 	padding: 6px;
 	width: 160px;
 	margin-top: -5px;
-	float: right;
 	line-height: 18px;
+	text-align: left;
 
 }
 
@@ -431,8 +431,9 @@ a img{border: 0;}
 .buttons ul li:last-child i{
 	position: absolute;
 	color: #E30A21;
-	font-size: 29px;
-	left: 112px;
+	font-size: 20px;
+	right: -8px;
+	top: 5px;
 	-moz-transition: all 500ms ease-in;
     -ms-transition: all 500ms ease-in;
     -o-transition: all 500ms ease-in;
@@ -578,7 +579,7 @@ input[type="radio"]:checked:after {
 	color: #666;
 	font-size: 13px;
 	display: inline-block;
-	padding-left: 20px;
+	padding-left: 0;
 	-moz-transition: all 500ms ease-in;
     -ms-transition: all 500ms ease-in;
     -o-transition: all 500ms ease-in;
@@ -589,6 +590,9 @@ input[type="radio"]:checked:after {
     -ms-transition: all 500ms ease-out;
     -o-transition: all 500ms ease-out;
 }
+
+
+/* Tablet Portrait */
 
 
 
@@ -621,7 +625,7 @@ input[type="radio"]:checked:after {
 	position: relative;
 	margin: 0 auto;
 	background-color: #fff;
-	width: 92%;
+	width: 96%;
 	min-height: 440px;
 	padding: 0;
 	border: 0;
@@ -664,6 +668,12 @@ input[type="radio"]:checked:after {
 
 }
 
+.lang ul li a {
+	text-align: center;
+	padding: 10px;
+
+}
+
 .tittleissue span{
 
 	width: 80%;
@@ -689,7 +699,7 @@ input[type="radio"]:checked:after {
 
 
 
-
+/* Tablet Landscape */
 
 
 
@@ -708,11 +718,23 @@ input[type="radio"]:checked:after {
 }
 
 .imacsup{
+	
+	width: 100%;
+	min-height: 310px;
+	background: #47505e;
 	border-radius: 15px;
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
-	margin-bottom: 50px;
+	padding-top: 8px;
+}
 
+.screen{
+	width: 87%;
+	position: relative;
+	margin: 0 auto;
+	height: 96%;
+	padding: 0;
+	border: 0;
 }
 
 .logoinv span:first-child{
@@ -738,6 +760,12 @@ input[type="radio"]:checked:after {
 .subscribeimg img{
 	width: 100%;
 	margin-top: 60px;
+}
+
+.lang ul li a {
+	text-align: center;
+	padding: 10px;
+
 }
 
 	
@@ -867,6 +895,12 @@ input[type="radio"]:checked:after {
 	min-height: 30px;
 	line-height: 30px;
 	margin: 0 2px;
+
+}
+
+.lang ul li a {
+	text-align: center;
+	padding: 10px;
 
 }
 
