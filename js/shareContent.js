@@ -3,13 +3,21 @@
             $('#shareContent').modal('show');
         });
 
-        $('#Accept').click(function () {
+         $('#Accept').click(function () {
             var mails = $("#mails").val();
             var mail_from = $("#mail_from").val();
             var mensaje = $("#mensaje").val();
-			var lang = QueryString.lang;
-            enviar_correo(mail_from, mails, mensaje, lang.toLowerCase());
-        });
+			var validado = validateMultipleEmailsCommaSeparated(mails);
+			if(validado){
+				var lang = QueryString.lang;
+				enviar_correo(mail_from, mails, mensaje, lang.toLowerCase());
+				return true;
+			}else{
+				document.getElementById("incorrect").innerHTML = "Invalid format email(s)";
+				$( "#incorrect" ).addClass( "alert alert-danger" );
+				return false;
+			}
+        }); 
     });
 
     function enviar_correo(de, para, mensaje,lang) {
@@ -54,3 +62,29 @@
     }
     return query_string;
 }();
+
+function trim(str, chars) {
+    return ltrim(rtrim(str, chars), chars);
+}
+function ltrim(str, chars) {
+    chars = chars || "\\s";
+    return str.replace(new RegExp("^[" + chars + "]+", "g"), "");
+}
+function rtrim(str, chars) {
+    chars = chars || "\\s";
+    return str.replace(new RegExp("[" + chars + "]+$", "g"), "");
+}
+
+function validateEmail(field) {
+    var regex=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    return (regex.test(trim(field))) ? true : false;
+}
+function validateMultipleEmailsCommaSeparated(value) {
+    var result = value.split(",");
+
+    //alert(result);
+    for(var i = 0;i < result.length;i++)
+    if(!validateEmail(result[i])) 
+            return false;               
+    return true;
+}
