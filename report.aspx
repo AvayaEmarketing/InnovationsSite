@@ -112,6 +112,7 @@
                     <ul class="nav">
                         <li><a href="#" id="subscribe">Subscribe</a></li>
                         <li><a href="#" id="feedback">Feedback</a></li>
+                        <li><a href="#" id="share">Share Content</a></li>
                         <li><a href="#" id="exit">Exit</a></li>
                     </ul>
                 </div>
@@ -236,6 +237,59 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Share Content -->
+    <div class="container" id="cont_share" style="display:none;">
+        <div class="row-fluid">
+
+
+            <div class="span9">
+
+                <hr style="margin-top: 0;">
+
+                <div class="row-fluid">
+                    <div class="span12">
+                        <h2>Innovations Magazine</h2>
+
+
+                        <table id="datatables3" cellpadding="0" cellspacing="0" border="0" style="width: 100%; text-align: center; visibility: hidden" class="table table-striped table-bordered">
+                            <thead id="thead2">
+                                <tr>
+                                    <th class="sorting" width="10%">ID</th>
+                                    <th class="sorting" width="25%">Register Date</th>
+                                    <th class="sorting" width="25%">Name</th>
+                                    <th class="sorting" width="20%">Mailto</th>
+                                    <th class="sorting" width="20%">Comments</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody id="tbody2">
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>
+                                        <div id="Div2">
+                                            <a href="#" id="toExcel3"><img src="images/xls.png" alt="to Excel" /></a>
+                                        </div>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    
+
+
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <div class="modal hide" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false">
         <div class="modal-header">

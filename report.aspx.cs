@@ -51,6 +51,17 @@ public partial class report : System.Web.UI.Page
         public string registerDate { get; set; }
         
     }
+	
+	public class ShareContent
+    {
+        public string id { get; set; }
+		public string registerDate { get; set; }
+        public string message { get; set; }
+        public string name { get; set; }
+        public string mailto { get; set; }
+
+        
+    }
 
     public static string DataTableToJSON(DataTable table)
     {
@@ -114,6 +125,40 @@ public partial class report : System.Web.UI.Page
         string strSQL = "SELECT id,overall,comments,email,language,convert(varchar(60),registerDate) as registerDate FROM InnovationsFeedback";
         SqlCommand cmd = new SqlCommand(strSQL, con);
 
+        try
+        {
+            con.Open();
+            datos = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(datos);
+            result = DataTableToJSON(dt);
+            //result = JsonConvert.SerializeObject(dt);
+            con.Close();
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            result = "";
+        }
+        finally
+        {
+            con.Close();
+        }
+        return result;
+
+    }
+	
+	[WebMethod]
+    public static string getDatosReg3()
+    {
+        string result;
+        SqlDataReader datos;
+        SqlConnection con = new SqlConnection();
+        con.ConnectionString = ConfigurationManager.ConnectionStrings["calawebConnectionString"].ToString();
+        string strSQL = "SELECT id,convert(varchar(60),registerDate) as registerDate, name, mailto, comments FROM InnovationsShareContent";
+        SqlCommand cmd = new SqlCommand(strSQL, con);
+        
         try
         {
             con.Open();

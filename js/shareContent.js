@@ -11,6 +11,7 @@
 			if(validado){
 				var lang = QueryString.lang;
 				enviar_correo(mail_from, mails, mensaje, lang.toLowerCase());
+				guardarInfo(mail_from,mails,mensaje);
 				return true;
 			}else{
 				document.getElementById("incorrect").innerHTML = "Invalid format email(s)";
@@ -30,8 +31,30 @@
             data: JSON.stringify(datae),
             dataType: "json",
             success: function (result) {
-                if (resultado.d !== "fail") {
-                    window.top.location.href = "http://www4.avaya.com/cala/comms/inv-repo/english.html?lang=ESP";
+                if (result.d !== "fail") {
+                    document.location.href = "http://www4.avaya.com/cala/comms/inv-repo/index.html";
+					return true;
+                } else {
+                    alert("Alert, please try again");
+                }
+            }
+        });
+        return false;
+    }
+	
+	function guardarInfo(name, mailto, comments) {
+
+        var datae = {'name': name, 'mailto': mailto, 'comments':comments};
+        $.ajax({
+            type: "POST",
+            url: "EnviarMail.aspx/putData",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(datae),
+            dataType: "json",
+            success: function (result) {
+                if (result.d !== "fail") {
+                    document.location.href = "http://www4.avaya.com/cala/comms/inv-repo/index.html";
+					return true;
                 } else {
                     alert("Alert, please try again");
                 }
