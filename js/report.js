@@ -7,6 +7,9 @@ var Json_data;
 var dataTab2;
 var oTable2;
 
+var dataTab3;
+var oTable3;
+
 
 //tipo de mensajes ->  default, info, primary, sucess, warning, danger
 function message(texto, titulo, tipo) {
@@ -45,6 +48,8 @@ function cargarDatos2() {
         error: AjaxRefreshDataFailed
     });
 }
+
+
 
 function AjaxRefreshDataSucceeded(result) {
     if (result.d != "[]") {
@@ -149,6 +154,7 @@ $(document).ready(function () {
 
     cargarDatos();
     cargarDatosFeedback();
+	cargarDatosShare();
 
     $("#toExcel").click(function () {
         exportarTabla("XLS","subscribe");
@@ -157,21 +163,38 @@ $(document).ready(function () {
     $("#toExcel2").click(function () {
         exportarTabla("XLS","feedback");
     });
+	
+	$("#toExcel3").click(function () {
+        exportarTabla("XLS","feedback");
+    });
 
     $("#subscribe").css({ "background-color": "#8e040a", "color": "#fff" });
 
     $("#subscribe").click(function () {
         $("#cont_feedback").css({ "display": "none" });
+		$("#cont_share").css({ "display": "none" });
         $("#cont_subscribe").css({ "display": "block", "margin-right": "auto", "margin-left": "auto", "*zoom": "1", "position": "relative" });
         $("#subscribe").css({ "background-color": "#8e040a", "color": "#fff" });
         $("#feedback").css({ "background-color": "transparent", "color": "#a1aaaf" });
+		$("#share").css({ "background-color": "transparent", "color": "#a1aaaf" });
     });
 
     $("#feedback").click(function () {
         $("#cont_subscribe").css({ "display": "none" });
+		$("#cont_share").css({ "display": "none" });
         $("#cont_feedback").css({ "display": "block", "margin-right": "auto", "margin-left": "auto", "*zoom": "1", "position": "relative" });
         $("#feedback").css({ "background-color": "#8e040a", "color": "#fff" });
         $("#subscribe").css({ "background-color": "transparent", "color": "#a1aaaf" });
+		$("#share").css({ "background-color": "transparent", "color": "#a1aaaf" });
+    });
+	
+	 $("#share").click(function () {
+        $("#cont_subscribe").css({ "display": "none" });
+		$("#cont_feedback").css({ "display": "none" });
+        $("#cont_share").css({ "display": "block", "margin-right": "auto", "margin-left": "auto", "*zoom": "1", "position": "relative" });
+        $("#share").css({ "background-color": "#8e040a", "color": "#fff" });
+        $("#feedback").css({ "background-color": "transparent", "color": "#a1aaaf" });
+		$("#subscribe").css({ "background-color": "transparent", "color": "#a1aaaf" });
     });
 
     
@@ -339,3 +362,84 @@ $(document).ready(function () {
         }
 
     }
+	
+	 //Cargar Datos Share Content
+    function cargarDatosShare() {
+        
+        $.ajax({
+            type: "POST",
+            url: "report.aspx/getDatosReg3",
+            contentType: "application/json; charset=utf-8",
+            data: "{ }",
+            dataType: "json",
+            success: AjaxGetFieldDataSucceeded3,
+            error: AjaxGetFieldDataFailed3
+        });
+    }
+
+    function cargarDatosShare3() {
+
+        $.ajax({
+            type: "POST",
+            url: "report.aspx/getDatosReg3",
+            contentType: "application/json; charset=utf-8",
+            data: "{ }",
+            dataType: "json",
+            success: AjaxRefreshDataSucceeded3,
+            error: AjaxRefreshDataFailed3
+        });
+    }
+
+    function AjaxRefreshDataSucceeded3(result) {
+        if (result.d != "[]") {
+            var jposts = result.d;
+            var mensaje;
+            var titulo;
+            dataTab3 = $.parseJSON(jposts);
+            oTable3.fnClearTable();
+            oTable3.fnAddData(dataTab);
+        } else {
+            oTable3.fnClearTable();
+            message("No data found", "Alert", "danger");
+        }
+    }
+
+    function AjaxRefreshDataFailed3(result) {
+        alert(result.status + ' ' + result.statusText);
+    }
+
+    function AjaxGetFieldDataFailed3(result) {
+        alert(result.status + ' ' + result.statusText);
+    }
+
+    function AjaxGetFieldDataSucceeded3(result) {
+        if (result.d != "[]") {
+            var jposts = result.d;
+            var mensaje;
+            var titulo;
+            try {
+                dataTab3 = $.parseJSON(jposts);
+            } catch (exception) {
+                dataTab3 = "error";
+            }
+            if (dataTab3 != "error") {
+                $("#datatables3").css("visibility", "visible");
+                oTable3 = $('#datatables3').dataTable({
+                    "bProcessing": true,
+                    "aaData": dataTab3,
+                    "aoColumns": [{ "mDataProp": "id" }, { "mDataProp": "registerDate" }, { "mDataProp": "name" }, { "mDataProp": "mailto" }, { "mDataProp": "comments" }],
+                    "sPaginationType": "bootstrap",
+                    "aaSorting": [[0, "asc"]],
+                    "bJQueryUI": true
+                });
+            };
+           
+        } else {
+            
+            message("No data found", "Information", "danger");
+
+        }
+
+    }
+	
+	

@@ -112,5 +112,68 @@ using System.Net.Mime;
 
             return plantilla;
         }
+		
+	[WebMethod]
+    public static string putData(string name, string mailto, string comments)
+	{
+        string result = "";
+        DateTime datt = DateTime.Now;
+        SqlConnection con = new SqlConnection();
+        con.ConnectionString = ConfigurationManager.ConnectionStrings["calawebConnectionString"].ToString();
+
+        string strSQL = "SELECT CURRENT_TIMESTAMP AS registerDate";
+        SqlCommand cmd = new SqlCommand(strSQL, con);
+        try
+        {
+            con.Open();
+            datt = (DateTime)cmd.ExecuteScalar();
+            con.Close();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        finally
+        {
+            con.Close();
+        }
+
+        string stmt = "INSERT INTO InnovationsShareContent (registerDate, name, mailto ,comments)  VALUES (@registerDate, @name, @mailto, @comments)";
+
+        SqlCommand cmd2 = new SqlCommand(stmt, con);
+		
+		cmd2.Parameters.Add("@registerDate", SqlDbType.VarChar, 60);
+        cmd2.Parameters.Add("@name", SqlDbType.VarChar, 100);
+        cmd2.Parameters.Add("@mailto", SqlDbType.VarChar, 100);
+        cmd2.Parameters.Add("@comments", SqlDbType.VarChar, 150);
+
+        cmd2.Parameters["@registerDate"].Value = datt;
+		cmd2.Parameters["@name"].Value = name;
+        cmd2.Parameters["@mailto"].Value = mailto;
+        cmd2.Parameters["@comments"].Value = comments;
+
+        try
+        {
+            con.Open();
+            cmd2.ExecuteScalar();
+            result = "ok";
+
+            con.Close();
+
+        }
+        catch (Exception ex)
+        {
+            result = "fail";
+            Console.WriteLine(ex.Message);
+        }
+        finally
+        {
+            con.Close();
+        }
+        return result;
+
+    }
+	
+	
     }
 
