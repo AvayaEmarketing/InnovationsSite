@@ -415,11 +415,10 @@ a img{border: 0;}
 	border-radius: 6px;
 	height: 23px;
 	padding: 6px;
-	width: 160px;
+	max-width: 140px;
 	margin-top: -5px;
 	line-height: 18px;
 	text-align: left;
-
 }
 
 .buttons ul li:last-child a{
@@ -548,7 +547,7 @@ input[type="radio"]:checked:after {
 	font-family: 'proximanova-lihgt';
 	color: #777;
 	padding: 15px;
-	width: 90%;
+	min-width: 100%;
 }
 
 
